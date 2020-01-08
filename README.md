@@ -50,3 +50,6 @@
  - Compare files in two directories
  - Hide non paired files using silent mode
  - Clear terminal colouring using output mode
+ 
+#### Version 1.1 - Bug fixes
+ - Fixed bugs that prevented files from being properly compared

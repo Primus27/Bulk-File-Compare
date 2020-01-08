@@ -24,10 +24,14 @@ def scan_file(file1, file2):
     :return: Boolean value on whether the files have the same contents.
     """
     command = f"cmp -s \"{file1}\" \"{file2}\"; echo $?"
-    results = os.popen(command).read()
+    r = os.popen(command).read()
+    results = r.strip(' \t\n\r')
 
     if results == "0":
         return True
+    elif results == "2":
+        print("Error processing file - Something went wrong")
+        return False
     else:
         return False
 
